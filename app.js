@@ -10,6 +10,9 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use((req, res) => {
+  res.status(404).sendFile(__dirname + '/public/thank_you.html');
+});
 
 app.post('/feedback', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'thank_you.html'));
