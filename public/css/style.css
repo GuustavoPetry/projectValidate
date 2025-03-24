@@ -69,7 +69,12 @@
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 6rem 1rem;
+    border-radius: 4px;
   }
   
   .hero h1 {
@@ -172,8 +177,19 @@
   }
   
   @media (max-width: 768px) {
+    .cta-button {
+      padding: 0.5rem 1rem; /* Reduz o tamanho do padding */
+      font-size: 0.5rem;   /* Reduz o tamanho da fonte */
+      text-align: center;
+      width: 50%;
+    }
+
     .hero h1 {
-      font-size: 2rem;
+      font-size: 1.3rem;
+    }
+
+    .hero p {
+      font-size: 0.8rem;
     }
     
     .features-grid, .steps {
@@ -186,10 +202,17 @@
   }
 
   .container {
-    max-width: 800px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    border-radius: 10px;
 }
+
+  .container-form {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
 
 .form-card {
     background: white;
@@ -266,7 +289,7 @@
 
 .radio-label {
     display: flex;
-    align-items: center;
+    align-items: left;
     padding: 0.75rem;
     border: 1px solid #E5E7EB;
     border-radius: 0.5rem;
@@ -370,8 +393,8 @@
         padding: 1.5rem;
     }
 
-    .header h1 {
-        font-size: 1.5rem;
+    .header p {
+      font-size: 1.0rem;
     }
 
     .questions {
@@ -380,10 +403,21 @@
 
     .question-card {
         padding: 1rem;
-        flex-direction: column;
     }
 
     .icon {
         margin-bottom: 0.5rem;
+    }
+
+    .question-content h3 {
+      font-size: small;
+    }
+
+    .radio-label .label-text {
+      font-size: small;
+    }
+
+    .icon {
+      height: 5%;
     }
 }
