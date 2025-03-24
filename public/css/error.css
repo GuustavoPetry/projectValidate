@@ -19,7 +19,7 @@ body {
     max-width: 600px;
 }
 
-.error-card {
+.thank-you-card {
     background: white;
     padding: 40px;
     border-radius: 20px;
@@ -27,17 +27,17 @@ body {
     text-align: center;
 }
 
-.error-icon {
-    width: 100px;
-    height: 100px;
-    background: #6c757d;
+.check-icon {
+    width: 80px;
+    height: 80px;
+    background: #ff4444;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
     color: white;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -57,39 +57,19 @@ p {
     margin: 20px 0;
 }
 
-.button-group {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.retry-button, .support-button {
+.home-button {
     display: inline-block;
     padding: 12px 30px;
+    background: #ff4444;
+    color: white;
     text-decoration: none;
     border-radius: 25px;
     transition: background-color 0.3s ease;
     font-weight: 500;
 }
 
-.retry-button {
-    background: #6c757d;
-    color: white;
-}
-
-.retry-button:hover {
-    background: #5a6268;
-}
-
-.support-button {
-    background: #f8f9fa;
-    color: #333;
-    border: 2px solid #dee2e6;
-}
-
-.support-button:hover {
-    background: #e2e6ea;
+.home-button:hover {
+    background: #ff2222;
 }
 
 @media (max-width: 480px) {
@@ -97,7 +77,7 @@ p {
         padding: 15px;
     }
     
-    .error-card {
+    .thank-you-card {
         padding: 30px 20px;
     }
     
@@ -105,18 +85,9 @@ p {
         font-size: 24px;
     }
     
-    .error-icon {
-        width: 80px;
-        height: 80px;
-        font-size: 20px;
-    }
-    
-    .button-group {
-        flex-direction: column;
-    }
-    
-    .retry-button, .support-button {
-        width: 100%;
-        text-align: center;
+    .check-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
     }
 }
