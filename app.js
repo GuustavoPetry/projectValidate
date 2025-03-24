@@ -28,33 +28,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/feedback', (req, res) => {
-  // const { email, question1, question2, question3, question4, question5, question6, question7 } = req.body;
+  res.sendFile(path.join(__dirname, 'public', 'thank_you.html'));
+});
 
-  // // Passo 1: Verificar se o e-mail já existe no banco de dados
-  // const checkEmailQuery = 'SELECT * FROM feedback WHERE email = ?';
-  // db.query(checkEmailQuery, [email], (err, result) => {
-  //   if (err) {
-  //     console.error('Erro ao verificar e-mail:', err);
-  //     return res.sendFile(path.join(__dirname, 'public', 'error.html'));
-  //   }
-
-  //   // Se já existir um registro com o mesmo e-mail
-  //   if (result.length > 0) {
-  //     return res.sendFile(path.join(__dirname, 'public', 'email_exists.html'));
-  //   }
-
-  //   // Passo 2: Se o e-mail não existir, inserir o feedback no banco de dados
-  //   const insertQuery = 'INSERT INTO feedback (email, question1, question2, question3, question4, question5, question6, question7) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-  //   db.query(insertQuery, [email, question1, question2, question3, question4, question5, question6, question7], (err, result) => {
-  //     if (err) {
-  //       console.error('Erro ao inserir no banco de dados:', err);
-  //       return res.sendFile(path.join(__dirname, 'public', 'error.html'));
-  //     }
-      // Após o sucesso, renderize a página de agradecimento
-      res.sendFile(path.join(__dirname, 'public', 'thank_you.html'));
-    });
-  // });
-// });
 
 // Rota para a página principal
 app.get('/', (req, res) => {
@@ -66,5 +42,5 @@ app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
 
-// Exportar a conexão do banco de dados
-// module.exports.db = db;
+
+
