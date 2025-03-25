@@ -79,7 +79,6 @@
   
   .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -88,6 +87,11 @@
   .hero p {
     font-size: 1.25rem;
     opacity: 0.9;
+  }
+
+  .hero img {
+    max-width: 500px;
+    width: 70%;
   }
   
   .features {
